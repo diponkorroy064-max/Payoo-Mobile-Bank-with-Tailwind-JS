@@ -38,21 +38,21 @@
         <img src="assets/Logo-full.png" alt="">
     </div>
 
-    <div class="form pt-10">
+    <div class="form pt-10 pb-32">
         <form class="fieldset bg-white border-base-300 rounded-box w-xs border p-4 shadow mx-auto">
             <fieldset class="fieldset">
                 <label class="label text-neutral font-bold">Mobile Number</label>
-                <input maxlength="11" minlength="11" type="text" class="input validator bg-base-200 rounded-full" placeholder="Enter Your Number" required />
+                <input id="input-number" maxlength="11" minlength="11" type="text" class="input validator bg-base-200 rounded-full" placeholder="Enter Your Number" required />
                 <p class="validator-hint hidden">Required</p>
             </fieldset>
 
             <label class="fieldset">
                 <span class="label text-neutral font-bold">4 Digit Pin</span>
-                <input type="password" class="input validator bg-base-200 rounded-full" placeholder="Enter 4 Digit Pin" required />
+                <input id="input-pin" maxlength="4" minlength="4" type="password" class="input validator bg-base-200 rounded-full" placeholder="Enter 4 Digit Pin" required />
                 <span class="validator-hint hidden">Required</span>
             </label>
 
-            <button class="btn btn-primary mt-4 rounded-full" type="submit">Login</button>
+            <button id="login-btn" class="btn btn-primary mt-4 rounded-full" type="submit">Login</button>
         </form>
     </div>
 <script src="script/login.js"></script>
