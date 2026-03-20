@@ -36,10 +36,69 @@ function showOnly(id) {
     // transaction.classList.add("hidden");
     history.classList.add("hidden");
 
-    
-
     // show the section----
     const selected = document.getElementById(id);
     selected.classList.remove('hidden');
 };
+
+
+const addMoneyBtn = document.getElementById('addMoneyBtn');
+const cashoutBtn = document.getElementById('cashoutBtn');
+const transferBtn = document.getElementById('transferBtn');
+const bonusBtn = document.getElementById('bonusBtn');
+const payBtn = document.getElementById('payBtn');
+const transactionBtn = document.getElementById('transactionBtn');
+
+document.getElementById('allBtn').addEventListener('click', (event) => {
+    const btn = event.target.closest('button');
+
+    if (btn == addMoneyBtn) {
+        addMoneyBtn.classList.add('btn-primary');
+        cashoutBtn.classList.remove('btn-primary');
+        transferBtn.classList.remove('btn-primary');
+        bonusBtn.classList.remove('btn-primary');
+        payBtn.classList.remove('btn-primary');
+        transactionBtn.classList.remove('btn-primary');
+    }
+    else if (btn == cashoutBtn) {
+        addMoneyBtn.classList.remove('btn-primary');
+        cashoutBtn.classList.add('btn-primary');
+        transferBtn.classList.remove('btn-primary');
+        bonusBtn.classList.remove('btn-primary');
+        payBtn.classList.remove('btn-primary');
+        transactionBtn.classList.remove('btn-primary');
+    }
+    else if (btn == transferBtn) {
+        addMoneyBtn.classList.remove('btn-primary');
+        cashoutBtn.classList.remove('btn-primary');
+        transferBtn.classList.add('btn-primary');
+        bonusBtn.classList.remove('btn-primary');
+        payBtn.classList.remove('btn-primary');
+        transactionBtn.classList.remove('btn-primary');
+    }
+    else if (btn == bonusBtn) {
+        addMoneyBtn.classList.remove('btn-primary');
+        cashoutBtn.classList.remove('btn-primary');
+        transferBtn.classList.remove('btn-primary');
+        bonusBtn.classList.add('btn-primary');
+        payBtn.classList.remove('btn-primary');
+        transactionBtn.classList.remove('btn-primary');
+    }
+    else if (btn == payBtn) {
+        addMoneyBtn.classList.remove('btn-primary');
+        cashoutBtn.classList.remove('btn-primary');
+        transferBtn.classList.remove('btn-primary');
+        bonusBtn.classList.remove('btn-primary');
+        payBtn.classList.add('btn-primary');
+        transactionBtn.classList.remove('btn-primary');
+    }
+    else if (btn == transactionBtn) {
+        addMoneyBtn.classList.remove('btn-primary');
+        cashoutBtn.classList.remove('btn-primary');
+        transferBtn.classList.remove('btn-primary');
+        bonusBtn.classList.remove('btn-primary');
+        payBtn.classList.remove('btn-primary');
+        transactionBtn.classList.add('btn-primary');
+    }
+})
 
